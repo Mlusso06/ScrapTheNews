@@ -37,6 +37,13 @@ See below on how to perfom the install.
 ```
 npm i
 ```
+You will be installing the following npm packagages:
+* express
+* express-handlebars
+* mongoose
+* cheerio
+* axios 
+
 
 Next open MySQL and create a new "connection"
 * create a user name

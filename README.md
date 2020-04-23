@@ -5,7 +5,7 @@ The NewsScraper Applicaton is a demo of the ability to utilize :add more descirp
 
 ### [Scrape The News Link](https://eatdaburger1901.herokuapp.com/)
 
-![webNewsScrape](https://www.octoparse.com/media/7409/001-efficient-web-scraping.jpeg?width=771&height=385)
+![webNewsScrape](./public/assets/images/efficient-web-scraping.png)
 
 ## Getting Started
 

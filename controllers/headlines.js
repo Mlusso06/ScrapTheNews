@@ -1,5 +1,5 @@
-import scarpe from "../scripts/scrape";
-import date from "../scripts/date";
+let scrape = require("../scripts/scrape");
+let date = require("../scripts/date");
 
 let Headline = require("../models/headline");
 
@@ -7,7 +7,7 @@ module.exports = {
     fetch: function(cb)
     // creating teh scrape function
      {
-        scarpe(function(data){
+        scrape(function(data){
             let articles = data;
             for (var i=0; i < articles.lenghth; i++) {
                 articles[i].date = makeDate();

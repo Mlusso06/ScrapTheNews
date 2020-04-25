@@ -1,5 +1,5 @@
-import Note from ("../models/notes");
-import makeDate from ("../scripts/date");
+let Note = require("../models/notes");
+let makeDate = require("../scripts/date");
 
 module.exports = {
     get: function(data, cb){

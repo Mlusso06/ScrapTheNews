@@ -11,8 +11,19 @@ let bodyParser = require("body-parser");
 let axios = require("axios");
 let cheerio = require("cheerio");
 
-// Require all models
-// let db = require("./models");
+
+// use the mongo deployed db, or local
+let db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadLines";
+
+//connect to the mongoose
+mongoose.connect(db, function(error){
+    if (error) {
+        console.log(error);
+    }
+    else {
+        console.log("mongoose connnection is sucessful");
+    }
+});
 
 // setting our port, and using the .env file to hide my real port
 let PORT = process.env.PORT || 3000;
@@ -23,6 +34,10 @@ let app = express();
 // set up the express router
 
 let router = express.Router();
+
+
+// need to require my config router for handlebars to pass
+require("./config/routes")(router);
 
 // clean up the file directory for my static items / images
 app.use(express.static(__dirname + "/public"));

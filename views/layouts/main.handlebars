@@ -1,9 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Scrape the News</title>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+{{!-- setting the main page template --}}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Scrape The News</title>
+    {{!-- adding the style sheets --}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {{!-- getting some google font going --}}
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+SC" rel="stylesheet">
+    {{!-- link to my css  --}}
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <!-- Allow Zooming on Mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1 shrink-to-fit=no">
+</head>
+
+</head>
+
+<body>
+    {{{body}}}
+
+    <footer class="footer">
+        <div class="container">
+            <p>This is the mongo scraper for "xxxxxx" who ever I want</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js"></script>
+    <script src="../../public/assets/javascript/index.js"></script>
+</body>
+
 </html>

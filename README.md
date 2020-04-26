@@ -3,7 +3,7 @@ Let's the user find some latest news articles to save and comment on them.
 
 The NewsScraper Applicaton is a demo of the ability to utilize :add more descirption later. 
 
-### [Scrape The News Link](https://eatdaburger1901.herokuapp.com/)
+### [Scrape The News Link]( https://reasonwithme.herokuapp.com/)
 
 ![webNewsScrape](./public/assets/images/efficient-web-scraping.png)
 
@@ -15,14 +15,14 @@ These instructions will get you a copy of the project [NewsScraper](https://gith
 
 What things you need: 
 * code editing [Visual Studio](https://visualstudio.microsoft.com/)
-* work bench ui [MySQL](https://dev.mysql.com/doc/workbench/en/)
+* work bench ui [robo3t](https://robomongo.org/)
 
 
 ```
 Open your Code editing software (example Visual Studio)
 
 Open the "Terminal" in studio
-perform a git clone https://github.com/Mlusso06/EatDaBurger.git
+perform a git clone https://github.com/Mlusso06/ScrapeTheNews.git
 ```
 
 ### Installing
@@ -86,7 +86,7 @@ Server listening on: http://localhost:8080
 ## Deployment
 
 We deployed with [Heroku](https://dashboard.heroku.com/apps)
-using the the app [JawsDB](https://devcenter.heroku.com/articles/jawsdb)
+using the the app [mLab](https://reasonwithme.herokuapp.com/)
 
 #### read individual instructions for more detal
 

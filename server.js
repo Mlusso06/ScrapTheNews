@@ -25,6 +25,8 @@ let cheerio = require("cheerio");
 //     }
 // });
 
+// mongo db for later 
+// mongodb://Mlusso06:thispasswrd06@ds237357.mlab.com:37357/heroku_qnxh8bt0
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadLines', {
     useNewUrlParser: true,
     useUnifiedTopology: true,

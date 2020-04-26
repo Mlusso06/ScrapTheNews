@@ -1,5 +1,5 @@
 let scrape = require("../scripts/scrape");
-let date = require("../scripts/date");
+let makeDate = require("../scripts/date");
 
 let Headline = require("../models/headline");
 
@@ -20,7 +20,7 @@ module.exports = {
                 cb(err, docs);
             });
 
-        })
+        });
 
     },
 

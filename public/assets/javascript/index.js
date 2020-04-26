@@ -1,4 +1,4 @@
-
+// run css and Html
 $(document).ready(function() {
 
     const articleContainer = $(".article-container");
@@ -22,7 +22,7 @@ $(document).ready(function() {
     }
   
     function renderArticles(articles) {
-      const articlePanels = [];
+      let articlePanels = [];
       for (let i = 0; i < articles.length; i++) {
         articlePanels.push(createPanel(articles[i]));
       }
@@ -31,7 +31,7 @@ $(document).ready(function() {
   
     // creating the panel and setting some elements to formate
     function createPanel(article) {
-      const panel = $(
+      let panel = $(
         [
           "<div class='panel panel-default'>",
           "<div class='panel-heading'>",
@@ -55,7 +55,7 @@ $(document).ready(function() {
     }
   
     function renderEmpty() {
-      const emptyAlert = $(
+      let emptyAlert = $(
         [
           "<div class='alert alert-warning text-center'>",
           "<h4>Uh Oh. Looks like we don't have any new articles.</h4>",
@@ -75,7 +75,7 @@ $(document).ready(function() {
     }
   // based on the onclick to what the user has clicked on
     function handleArticleSave() {
-      const articleToSave = $(this)
+      let articleToSave = $(this)
         .parents(".panel")
         .data();
       articleToSave.saved = true;

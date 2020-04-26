@@ -23,7 +23,7 @@ $(document).ready(function () {
     }
 
     function renderArticles(articles) {
-        const articlePanels = [];
+        let articlePanels = [];
         for (let i = 0; i < articles.length; i++) {
             articlePanels.push(createPanel(articles[i]));
         }
@@ -31,7 +31,7 @@ $(document).ready(function () {
     }
 
     function createPanel(article) {
-        const panel = $(
+        let panel = $(
             [
                 "<div class='panel panel-default'>",
                 "<div class='panel-heading'>",
@@ -56,7 +56,7 @@ $(document).ready(function () {
     }
 
     function renderEmpty() {
-        const emptyAlert = $(
+        let emptyAlert = $(
             [
                 "<div class='alert alert-warning text-center'>",
                 "<h4>Uh Oh. Looks like we don't have any saved articles.</h4>",
@@ -77,8 +77,8 @@ $(document).ready(function () {
     function renderNotesList(data) {
 
         //render notes function and set them into an array
-        const notesToRender = [];
-        const currentNote;
+        let notesToRender = [];
+        let currentNote;
         if (!data.notes.length) {
             currentNote = ["<li class='list-group-item'>", "No notes for this article yet.", "</li>"].join("");
             notesToRender.push(currentNote);
@@ -113,9 +113,9 @@ $(document).ready(function () {
     }
 
     function handleArticleNotes() {
-        var currentArticle = $(this).parents(".panel").data();
+        let currentArticle = $(this).parents(".panel").data();
         $.get("/api/notes/" + currentArticle._id).then(function (data) {
-            var modalText = [
+            let modalText = [
                 "<div class='container-fluid text-center'>",
                 "<h4>Notes For Article: ",
                 currentArticle._id,
@@ -131,7 +131,7 @@ $(document).ready(function () {
                 message: modalText,
                 closeButton: true
             });
-            var noteData = {
+            let noteData = {
                 _id: currentArticle._id,
                 notes: data || []
             };
@@ -143,8 +143,8 @@ $(document).ready(function () {
     function handleNoteSave() {
 
         // time to save a new note to an articles, grab  the note that was typed in the box
-        const noteData;
-        const newNote = $(".bootbox-body textarea").val().trim();
+        let noteData;
+        let newNote = $(".bootbox-body textarea").val().trim();
         if (newNote) {
             noteData = {
                 _id: $(this).data("article")._id,
@@ -158,7 +158,7 @@ $(document).ready(function () {
     }
 
     function handleNoteDelete() {
-        const noteToDelete = $(this).data("_id");
+        let noteToDelete = $(this).data("_id");
         $.ajax({
             url: "/api/notes/" + noteToDelete,
             method: "DELETE"

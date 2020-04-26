@@ -13,17 +13,22 @@ let cheerio = require("cheerio");
 
 
 // use the mongo deployed db, or local
-let db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadLines";
+// let db = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadLines";
 
 //connect to the mongoose
-mongoose.connect(db, function(error){
-    if (error) {
-        console.log(error);
-    }
-    else {
-        console.log("mongoose connnection is sucessful");
-    }
-});
+// mongoose.connect(db, function(error){
+//     if (error) {
+//         console.log(error);
+//     }
+//     else {
+//         console.log("mongoose connnection is sucessful");
+//     }
+// });
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mongoHeadLines', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
 // setting our port, and using the .env file to hide my real port
 let PORT = process.env.PORT || 3000;
